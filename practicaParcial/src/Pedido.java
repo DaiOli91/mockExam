@@ -69,4 +69,13 @@ public class Pedido {
 
     ///////////////// OTROS
     ///////////////// OVERRIDDEN
+
+    @Override
+    public String toString() {
+        return "Pedido:" +
+                this.cliente.toString() + "\n" +
+                this.producto.toString() + "\n" +
+                "Cant Kms: " + cantKms +
+                "Costo Total: " + this.costoTotal + "\n\n";
+    }
 }
