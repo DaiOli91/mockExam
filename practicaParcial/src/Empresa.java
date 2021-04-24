@@ -43,5 +43,40 @@ public class Empresa {
     }
 
     ///////////////// OTROS
+
+    public void agregarCliente (Cliente cliente){
+        this.clientes.add(cliente);
+    }
+
+    public void agregarProducto (Producto producto){
+        this.productos.add(producto);
+    }
+
+    public int agregarPedido(Pedido pedido){ //devuelve 1 si lo agregó
+        int flag = 0;
+
+        if (pedido.getProducto().getNroStock() >= 1) //corroboro que haya stock internamente por las dudas
+
+    {
+        this.pedidos.add(pedido);
+        flag = 1;
+    }
+        return flag;
+    }
+
+    public double calcularPromedioCostos(){
+        double sumaCostos = 0;
+        double promedio = 0;
+        if (!this.pedidos.isEmpty()){
+
+        for (Pedido aux_pedido : this.pedidos
+             ) {
+            sumaCostos += aux_pedido.getCostoTotal();
+
+        }
+            promedio = sumaCostos / pedidos.size();
+        }
+        return promedio;
+    }
     ///////////////// OVERRIDDEN
 }
