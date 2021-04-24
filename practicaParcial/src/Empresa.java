@@ -78,5 +78,16 @@ public class Empresa {
         }
         return promedio;
     }
+
+    public String getClienteConMasVentas(){
+        String message = "No hay clientes disponibles";
+
+        if(!this.clientes.isEmpty()){
+            //  studentlist.sort((Student s1, Student s2)->s1.getAge()-s2.getAge());
+            this.clientes.sort((Cliente c1, Cliente c2)-> c1.getCantCompras()-c2.getCantCompras());
+            message = this.clientes.get(0).toString();
+        }
+        return message;
+    }
     ///////////////// OVERRIDDEN
 }
