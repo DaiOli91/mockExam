@@ -51,8 +51,8 @@ public abstract class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente" +
-                "Direccion: " + direccion + '\n' +
-                "Telefono: " + telefono + '\n'; //no interesa mostrar la cantidad de compras realizadas
+        return  "Direccion: " + direccion + '\n' +
+                "Telefono: " + telefono + '\n' +
+                "Cantidad de compras: " + cantCompras + '\n';
     }
 }

@@ -46,6 +46,10 @@ public class Producto {
         this.precio = precio;
     }
 
+    public void disminuirStock(){
+        this.nroStock--;
+    }
+
     ///////////////// OTROS
     ///////////////// OVERRIDDEN
 

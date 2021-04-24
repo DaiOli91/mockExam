@@ -59,6 +59,11 @@ public class Empresa {
 
     {
         this.pedidos.add(pedido);
+        int indice = this.productos.indexOf(pedido.getProducto());
+        if (indice != -1){
+            productos.get(indice).disminuirStock();
+        }
+
         flag = 1;
     }
         return flag;
@@ -83,11 +88,12 @@ public class Empresa {
         String message = "No hay clientes disponibles";
 
         if(!this.clientes.isEmpty()){
-            //  studentlist.sort((Student s1, Student s2)->s1.getAge()-s2.getAge());
-            this.clientes.sort((Cliente c1, Cliente c2)-> c1.getCantCompras()-c2.getCantCompras());
+
+            this.clientes.sort((Cliente c2, Cliente c1)-> c1.getCantCompras()-c2.getCantCompras());
             message = this.clientes.get(0).toString();
         }
         return message;
     }
+
     ///////////////// OVERRIDDEN
 }

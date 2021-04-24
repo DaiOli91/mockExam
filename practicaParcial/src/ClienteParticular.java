@@ -30,7 +30,8 @@ public class ClienteParticular extends Cliente{
 
     @Override
     public String toString() {
-        return super.toString() +
-                "Nombre" + nombreReal + "\n\n";
+        return "\n" + "Cliente" + "\n" +
+                "Nombre: " + nombreReal +  "\n" +
+                super.toString();
     }
 }

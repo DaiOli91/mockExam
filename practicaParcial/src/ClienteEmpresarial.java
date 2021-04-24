@@ -31,7 +31,8 @@ public class ClienteEmpresarial extends Cliente{
 
     @Override
     public String toString() {
-        return super.toString() +
-                "Nombre" + nombreFantasia + "\n\n";
+        return "\n" + "Empresa" + "\n" +
+                "Nombre: " + nombreFantasia +  "\n" +
+                super.toString();
     }
 }
